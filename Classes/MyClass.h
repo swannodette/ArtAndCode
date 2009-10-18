@@ -11,11 +11,14 @@
 
 @interface MyClass : NSObject 
 {
-	NSString *myString;
+	NSString *name;
 }
 
-+ (id) makeANewOne;
++ (id) makeANewOne:(NSString*)name;
 
+- (id) initWithName:(NSString *)name;
+- (void) setName:(NSString *)aName;
+- (NSString*) name;
 - (void) sayHello;
 - (int) addA:(int)a toB:(int)b;
 

@@ -14,9 +14,9 @@
 #pragma mark -
 #pragma mark Class Methods
 
-+ (id) makeANewOne
++ (id) makeANewOne:(NSString*)name
 {
-	return [[[[self class] alloc] init] autorelease];
+	return [[[[self class] alloc] initWithName:name] autorelease];
 }
 
 #pragma mark -
@@ -24,17 +24,36 @@
 
 - (id) init
 {
+	[self initWithName:@"nobody"];
+	return self;
+}
+
+// designated initializer
+- (id) initWithName:(NSString*)aName
+{
 	self = [super init];
 	if (self != nil) {
-		myString = @"foobar!";
+		[self setName:aName];
 	}
 	return self;
 }
 
 
+- (void) setName:(NSString*)aName
+{
+	name = aName;
+}
+
+
+- (NSString*) name
+{
+	return name;
+}
+
+
 - (void) sayHello
 {
-	NSLog(@"Hello, world!");
+	NSLog(@"Hello, world! This is %@ calling.", [self name]);
 }
 
 
@@ -46,7 +65,7 @@
 
 - (NSString*) description
 {
-	return [NSString stringWithFormat:@"<MyClass: %@>", myString];
+	return [NSString stringWithFormat:@"<MyClass: %@>", [self name]];
 }
 
 
