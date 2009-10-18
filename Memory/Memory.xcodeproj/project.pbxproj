@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073B0359108BC50E00FE7F15 /* LeakyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 073B0358108BC50E00FE7F15 /* LeakyClass.m */; };
+		073B035F108BC52000FE7F15 /* GoodClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 073B035E108BC52000FE7F15 /* GoodClass.m */; };
 		8DD76F9A0486AA7600D96B5E /* Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Memory.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* Memory.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* Memory.1 */; };
@@ -26,6 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		073B0357108BC50E00FE7F15 /* LeakyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakyClass.h; sourceTree = "<group>"; };
+		073B0358108BC50E00FE7F15 /* LeakyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakyClass.m; sourceTree = "<group>"; };
+		073B035D108BC52000FE7F15 /* GoodClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodClass.h; sourceTree = "<group>"; };
+		073B035E108BC52000FE7F15 /* GoodClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodClass.m; sourceTree = "<group>"; };
 		08FB7796FE84155DC02AAC07 /* Memory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Memory.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* Memory_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Memory_Prefix.pch; sourceTree = "<group>"; };
@@ -61,6 +67,10 @@
 			children = (
 				32A70AAB03705E1F00C91783 /* Memory_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* Memory.m */,
+				073B0357108BC50E00FE7F15 /* LeakyClass.h */,
+				073B0358108BC50E00FE7F15 /* LeakyClass.m */,
+				073B035D108BC52000FE7F15 /* GoodClass.h */,
+				073B035E108BC52000FE7F15 /* GoodClass.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -133,6 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76F9A0486AA7600D96B5E /* Memory.m in Sources */,
+				073B0359108BC50E00FE7F15 /* LeakyClass.m in Sources */,
+				073B035F108BC52000FE7F15 /* GoodClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

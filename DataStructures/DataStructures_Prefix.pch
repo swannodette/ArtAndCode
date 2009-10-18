@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'DataStructures' target in the 'DataStructures' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
