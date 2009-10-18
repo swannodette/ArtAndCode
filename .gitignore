@@ -1,6 +1,9 @@
 # emacs noise
 *~
 
+# object files
+*.o
+
 # xcode noise
 */build/*
 *.pbxuser
