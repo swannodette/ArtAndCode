@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		073B02B8108BBCC600FE7F15 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 073B02B7108BBCC600FE7F15 /* MyClass.m */; };
+		073B037B108BCD5D00FE7F15 /* AnotherClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 073B037A108BCD5D00FE7F15 /* AnotherClass.m */; };
 		8DD76F9A0486AA7600D96B5E /* Classes.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Classes.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* Classes.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* Classes.1 */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		073B02B6108BBCC600FE7F15 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
 		073B02B7108BBCC600FE7F15 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
+		073B0379108BCD5D00FE7F15 /* AnotherClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherClass.h; sourceTree = "<group>"; };
+		073B037A108BCD5D00FE7F15 /* AnotherClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherClass.m; sourceTree = "<group>"; };
 		08FB7796FE84155DC02AAC07 /* Classes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classes.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* Classes_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classes_Prefix.pch; sourceTree = "<group>"; };
@@ -66,6 +69,8 @@
 				073B02B7108BBCC600FE7F15 /* MyClass.m */,
 				32A70AAB03705E1F00C91783 /* Classes_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* Classes.m */,
+				073B0379108BCD5D00FE7F15 /* AnotherClass.h */,
+				073B037A108BCD5D00FE7F15 /* AnotherClass.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			files = (
 				8DD76F9A0486AA7600D96B5E /* Classes.m in Sources */,
 				073B02B8108BBCC600FE7F15 /* MyClass.m in Sources */,
+				073B037B108BCD5D00FE7F15 /* AnotherClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

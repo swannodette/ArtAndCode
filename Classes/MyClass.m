@@ -16,7 +16,7 @@
 
 + (id) makeANewOne
 {
-	return [[[MyClass alloc] init] autorelease];
+	return [[[[self class] alloc] init] autorelease];
 }
 
 #pragma mark -

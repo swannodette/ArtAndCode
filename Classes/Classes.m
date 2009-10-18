@@ -1,18 +1,25 @@
 #import <Foundation/Foundation.h>
 #import "MyClass.h"
+#import "AnotherClass.h"
 
 int main (int argc, const char * argv[]) {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
-	MyClass *myInstance = [[MyClass alloc] init];
+	MyClass *instanceA = [[MyClass alloc] init];
 
-	[myInstance sayHello];
-	NSLog(@"Sum of 4 and 5: %d", [myInstance addA:4 toB:5]);
-	[myInstance release];
+	[instanceA sayHello];
+	NSLog(@"Sum of 4 and 5: %d", [instanceA addA:4 toB:5]);
+	[instanceA release];
 	
-	myInstance = [MyClass makeANewOne];
-	NSLog(@"a new instance: %@", myInstance);
-	[myInstance release];
+	instanceA = [MyClass makeANewOne];
+	NSLog(@"a new instance: %@", instanceA);
+	
+	// inheritance
+	AnotherClass *instanceB = [AnotherClass makeANewOne];
+	
+	[instanceB saySomethingElse];
+	// will give a compiler warning, but won't crash your code
+	[instanceB privateMethod];
 	
 	[pool drain];
 	return 0;
