@@ -1,4 +1,4 @@
-// gcc -Wall -o pointerfun1 pointerfun1.c
+// clang -Wall -o pointerfun1.o pointerfun1.c
 
 #include <stdio.h>
 

@@ -1,4 +1,4 @@
-// gcc -Wall -o structfun3 structfun3.c
+// clang -Wall -o structfun3.o structfun3.c
 
 #include <stdio.h>
 #include <stdlib.h> // defines malloc and free

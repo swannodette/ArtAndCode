@@ -1,4 +1,4 @@
-// gcc -Wall -o structfun2 structfun2.c
+// clang -Wall -o structfun2.o structfun2.c
 
 #include <stdio.h>
 
