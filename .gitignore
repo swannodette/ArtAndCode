@@ -1,5 +1,8 @@
+# emacs noise
+*~
+
 # xcode noise
-build/*
+*/build/*
 *.pbxuser
 *.mode1v3
 
