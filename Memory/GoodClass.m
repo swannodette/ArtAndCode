@@ -11,4 +11,33 @@
 
 @implementation GoodClass
 
+- (id) init
+{
+	self = [super init];
+	if (self != nil) {
+		foo = [[Foo alloc] init];
+	}
+	return self;
+}
+
+- (void) setFoo:(Foo*)aFoo
+{
+	[foo release];
+	foo = [aFoo retain];
+}
+
+- (Foo*) foo
+{
+	return foo;
+}
+
+- (void) dealloc
+{
+	[foo dealloc];
+	foo = nil;
+	NSLog(@"dealloc GoodClass");
+	[super dealloc];
+}
+
+
 @end

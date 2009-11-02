@@ -7,11 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Foo.h"
 
 
 @interface GoodClass : NSObject 
 {
-
+	Foo *foo;
 }
+
+- (void) setFoo:(Foo *)aFoo;
+- (Foo*) foo;
 
 @end

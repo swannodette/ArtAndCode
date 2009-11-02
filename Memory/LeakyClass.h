@@ -7,11 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "Foo.h"
 
 @interface LeakyClass : NSObject 
 {
-
+	Foo *foo;
 }
 
 @end

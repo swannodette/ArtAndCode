@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072368A8109EB6F000D7787E /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = 072368A7109EB6F000D7787E /* Foo.m */; };
 		073B0359108BC50E00FE7F15 /* LeakyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 073B0358108BC50E00FE7F15 /* LeakyClass.m */; };
 		073B035F108BC52000FE7F15 /* GoodClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 073B035E108BC52000FE7F15 /* GoodClass.m */; };
 		8DD76F9A0486AA7600D96B5E /* Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* Memory.m */; settings = {ATTRIBUTES = (); }; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		072368A6109EB6F000D7787E /* Foo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
+		072368A7109EB6F000D7787E /* Foo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		073B0357108BC50E00FE7F15 /* LeakyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakyClass.h; sourceTree = "<group>"; };
 		073B0358108BC50E00FE7F15 /* LeakyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakyClass.m; sourceTree = "<group>"; };
 		073B035D108BC52000FE7F15 /* GoodClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodClass.h; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				073B0358108BC50E00FE7F15 /* LeakyClass.m */,
 				073B035D108BC52000FE7F15 /* GoodClass.h */,
 				073B035E108BC52000FE7F15 /* GoodClass.m */,
+				072368A6109EB6F000D7787E /* Foo.h */,
+				072368A7109EB6F000D7787E /* Foo.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				8DD76F9A0486AA7600D96B5E /* Memory.m in Sources */,
 				073B0359108BC50E00FE7F15 /* LeakyClass.m in Sources */,
 				073B035F108BC52000FE7F15 /* GoodClass.m in Sources */,
+				072368A8109EB6F000D7787E /* Foo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
