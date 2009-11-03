@@ -28,7 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		073B02B6108BBCC600FE7F15 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		073B02B6108BBCC600FE7F15 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		073B02B7108BBCC600FE7F15 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
 		073B0379108BCD5D00FE7F15 /* AnotherClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherClass.h; sourceTree = "<group>"; };
 		073B037A108BCD5D00FE7F15 /* AnotherClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherClass.m; sourceTree = "<group>"; };

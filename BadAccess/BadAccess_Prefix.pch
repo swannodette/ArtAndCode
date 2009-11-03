@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'BadAccess' target in the 'BadAccess' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
