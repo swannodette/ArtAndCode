@@ -7,7 +7,7 @@
 //
 
 #import "Array_Speed_TestViewController.h"
-
+#import <objc/runtime.h>
 #include <mach/mach.h>
 #include <mach/mach_time.h>
 
@@ -80,9 +80,12 @@
 - (void) allocateArrays 
 {
 	if(cArray) delete cArray;
-	cArray = new MyCppObject[numberOfItems];
-	[nsArray release];
-	nsArray = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
+	
+  cArray = new MyCppObject[numberOfItems];
+	
+  [nsArray release];
+  nsArray = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
+  
 	for(int i=0; i<numberOfItems; i++) {
 		cArray[i].f = random() * 1.0f/(RAND_MAX+1);
 		MyNSObject *myObj = [[MyNSObject alloc] init];
@@ -90,6 +93,13 @@
 		[nsArray addObject:myObj];
 		[myObj release];
 	}
+  
+  // if doSomething is virtual the sizes are identical
+  // if doSomething is not virtual the C++ instance is half the size
+  size_t cpp_size = sizeof(MyCppObject);
+  NSLog(@"Size of instance %d, size of array of %d C++ objects %d", cpp_size, numberOfItems, numberOfItems * cpp_size);
+  size_t obj_size = class_getInstanceSize([MyNSObject class]);
+  NSLog(@"Size of instance %d, size of array of %d Objective-C objects %d", obj_size, numberOfItems, numberOfItems * obj_size);
 }
 
 

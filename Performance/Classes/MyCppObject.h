@@ -13,7 +13,7 @@ class MyCppObject {
 public:
 	float f;
 	
-	void doSomething() {
+	virtual void doSomething() {
 		f++;
 	}
 	

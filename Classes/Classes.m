@@ -1,13 +1,13 @@
 #import <Foundation/Foundation.h>
-#import <malloc/malloc.h>
+#import <objc/runtime.h>
 #import "MyClass.h"
 #import "AnotherClass.h"
 
 int main (int argc, const char * argv[]) {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
+	NSLog(@"size of MyClass instance %d", class_getInstanceSize([MyClass class])); // note use of class_getInstanceSize over sizeof
 	MyClass *instanceA = [[MyClass alloc] initWithName:@"Foo"];
-	NSLog(@"size of MyClass instance %d", malloc_size(instanceA)); // note use of malloc_size over sizeof
 
 	[instanceA sayHello];
 	NSLog(@"Sum of 4 and 5: %d", [instanceA addA:4 toB:5]);
