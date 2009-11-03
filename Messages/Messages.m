@@ -34,7 +34,7 @@ int main (int argc, const char * argv[]) {
 	int (*adder)(id, SEL, int, int);
 	SEL adderSel = @selector(addX:Y:);
 	NSLog(@"ainstance2 responds to addX:addY:, %d", [aInstance2 respondsToSelector:adderSel]);
-	adder = (int (*)(id, SEL, int, int))[aInstance2 methodForSelector:adderSel];
+	adder = (int (*)(id, SEL, int, int))[MyClass instanceMethodForSelector:adderSel];
 	
 	// Dynamic vs. Direct Call
 
@@ -58,7 +58,7 @@ int main (int argc, const char * argv[]) {
 		adder(aInstance2, adderSel, 4, 5);
 	}
 	endTime = mach_absolute_time();
-	NSLog(@"1,000,000 direct call took %f nanoseconds", (endTime-startTime)*ticksToNanoseconds);
+	NSLog(@"1,000,000 direct calls took %f nanoseconds", (endTime-startTime)*ticksToNanoseconds);
 	
 	// Plain C functions, MBP Core 2 Duo 2.5, ~4ms
 	startTime = mach_absolute_time();
@@ -66,7 +66,7 @@ int main (int argc, const char * argv[]) {
 		add(4, 5);
 	}
 	endTime = mach_absolute_time();
-	NSLog(@"1,000,000 simple C call took %f nanoseconds", (endTime-startTime)*ticksToNanoseconds);
+	NSLog(@"1,000,000 simple C calls took %f nanoseconds", (endTime-startTime)*ticksToNanoseconds);
 	
 	[pool drain];
 	return 0;

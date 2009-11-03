@@ -52,6 +52,21 @@
 }
 
 
+- (IBAction) doDirectMethod:(id)sender
+{
+	// get direct access to the instance method so it can be called as a normal C function ;)
+	void (*doSomething)(id, SEL);
+	SEL doSomethingSel = @selector(doSomething);
+	doSomething = (void (*)(id, SEL))[MyNSObject instanceMethodForSelector:doSomethingSel];
+	
+	uint64_t startTime = mach_absolute_time();
+	for(MyNSObject *obj in nsArray) {
+		doSomething(obj, doSomethingSel);
+	}
+	[self displayResult:mach_absolute_time() - startTime];
+}
+
+
 - (IBAction) doCArray:(id)sender 
 {
 	uint64_t start = mach_absolute_time();
@@ -62,7 +77,7 @@
 }
 
 
--(void) allocateArrays 
+- (void) allocateArrays 
 {
 	if(cArray) delete cArray;
 	cArray = new MyCppObject[numberOfItems];
@@ -78,7 +93,7 @@
 }
 
 
--(IBAction) sliderChanged:(id)sender 
+- (IBAction) sliderChanged:(id)sender 
 {
 	numberOfItems = sliderCount.value;
 	NSString *str = [[NSString alloc] initWithFormat:@"%i items", numberOfItems];
@@ -88,7 +103,7 @@
 }
 
 
-- (void)dealloc 
+- (void) dealloc 
 {
 	[nsArray release];
 	if(cArray) delete cArray;

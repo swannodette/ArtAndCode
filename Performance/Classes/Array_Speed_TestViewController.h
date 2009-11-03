@@ -25,11 +25,12 @@
 	IBOutlet	UILabel		*labelResults;
 }
 
--(IBAction) doNSArrayPerformSelector:(id)sender;
--(IBAction) doNSArrayForLoop:(id)sender;
--(IBAction) doCArray:(id)sender;
+- (IBAction) doNSArrayPerformSelector:(id)sender;
+- (IBAction) doNSArrayForLoop:(id)sender;
+- (IBAction) doDirectMethod:(id)sender;
+- (IBAction) doCArray:(id)sender;
 
--(IBAction) sliderChanged:(id)sender;
+- (IBAction) sliderChanged:(id)sender;
 
 @end
 

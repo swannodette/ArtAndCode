@@ -7,10 +7,7 @@
 //
 
 #pragma once
-
-
 #import <UIKit/UIKit.h>
-
 
 @interface MyNSObject : NSObject {
 	float f;
