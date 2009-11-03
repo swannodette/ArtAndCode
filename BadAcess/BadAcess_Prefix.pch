@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'BadAcess' target in the 'BadAcess' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
