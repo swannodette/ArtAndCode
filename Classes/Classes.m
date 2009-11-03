@@ -22,6 +22,7 @@ int main (int argc, const char * argv[]) {
 	[instanceB sayHello];
 	[instanceB saySomethingElse];
 	// will give a compiler warning, but won't crash your code
+  // usually you should assume warning will crash you code :)
 	[instanceB privateMethod];
 	
 	[pool drain];
