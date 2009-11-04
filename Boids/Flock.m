@@ -11,4 +11,26 @@
 
 @implementation Flock
 
+- (void) initWithCount:(int)count
+{
+  
+}
+
+
+- (void) update
+{
+  
+}
+
+
+- (void) render
+{
+  
+}
+
+- (NSArray*) boids
+{
+  return boids;
+}
+
 @end

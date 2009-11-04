@@ -25,10 +25,10 @@
 
 - (Boid*) initWithLocation:(Vector2D*)aloc maxSpeed:(float)ms maxForce:(float)mf;
 
-- (Vector2D*) steer:(Boid*)target slowDown:(BOOL)slowDown;
+- (Vector2D*) steer:(Vector2D*)target slowDown:(BOOL)slowDown;
 
 - (Vector2D*) cohesion:(Flock*)flock;
 - (Vector2D*) alignment:(Flock*)flock;
-- (Vector2D*) separate:(Flock*)flock;
+- (Vector2D*) separation:(Flock*)flock;
 
 @end

@@ -12,11 +12,14 @@
 
 @interface Flock : NSObject {
   int count;
+  NSMutableArray *boids;
 }
 
-- (void) initCount:(int)count;
+- (void) initWithCount:(int)count;
 
 - (void) update;
 - (void) render;
+
+- (NSArray*) boids;
 
 @end
