@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		077B369710A0F230004EF9B2 /* Vector2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B369610A0F230004EF9B2 /* Vector2D.m */; };
+		07D8B61610A12845005DA82F /* Boid.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B61510A12845005DA82F /* Boid.m */; };
+		07D8B61910A128FE005DA82F /* Flock.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D8B61810A128FE005DA82F /* Flock.m */; };
 		1D3623260D0F684500981E51 /* BoidsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* BoidsAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -22,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		077B369510A0F230004EF9B2 /* Vector2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector2D.h; path = Vector2D/Vector2D.h; sourceTree = "<group>"; };
+		077B369610A0F230004EF9B2 /* Vector2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vector2D.m; path = Vector2D/Vector2D.m; sourceTree = "<group>"; };
+		07D8B61410A12845005DA82F /* Boid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boid.h; sourceTree = "<group>"; };
+		07D8B61510A12845005DA82F /* Boid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Boid.m; sourceTree = "<group>"; };
+		07D8B61710A128FE005DA82F /* Flock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flock.h; sourceTree = "<group>"; };
+		07D8B61810A128FE005DA82F /* Flock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flock.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* BoidsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoidsAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* BoidsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoidsAppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +68,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077B361110A0E0A5004EF9B2 /* Vector2D */ = {
+			isa = PBXGroup;
+			children = (
+				077B369510A0F230004EF9B2 /* Vector2D.h */,
+				077B369610A0F230004EF9B2 /* Vector2D.m */,
+			);
+			name = Vector2D;
+			sourceTree = "<group>";
+		};
+		07D8B61010A127FB005DA82F /* Boid */ = {
+			isa = PBXGroup;
+			children = (
+				07D8B61410A12845005DA82F /* Boid.h */,
+				07D8B61510A12845005DA82F /* Boid.m */,
+				07D8B61710A128FE005DA82F /* Flock.h */,
+				07D8B61810A128FE005DA82F /* Flock.m */,
+			);
+			name = Boid;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +124,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				07D8B61010A127FB005DA82F /* Boid */,
+				077B361110A0E0A5004EF9B2 /* Vector2D */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				2514C27610084DB600A42282 /* Shaders */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -194,6 +225,9 @@
 				28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */,
 				2514C27210084DB100A42282 /* ES1Renderer.m in Sources */,
 				2514C27310084DB100A42282 /* ES2Renderer.m in Sources */,
+				077B369710A0F230004EF9B2 /* Vector2D.m in Sources */,
+				07D8B61610A12845005DA82F /* Boid.m in Sources */,
+				07D8B61910A128FE005DA82F /* Flock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

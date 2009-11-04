@@ -19,20 +19,20 @@
 // You must implement this method
 + (Class) layerClass
 {
-    return [CAEAGLLayer class];
+  return [CAEAGLLayer class];
 }
 
 //The GL view is stored in the nib file. When it's unarchived it's sent -initWithCoder:
 - (id) initWithCoder:(NSCoder*)coder
 {    
-    if ((self = [super initWithCoder:coder]))
+  if ((self = [super initWithCoder:coder]))
 	{
-        // Get the layer
-        CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
-        
-        eaglLayer.opaque = TRUE;
-        eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
-                                        [NSNumber numberWithBool:FALSE], kEAGLDrawablePropertyRetainedBacking, kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat, nil];
+    // Get the layer
+    CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
+    
+    eaglLayer.opaque = TRUE;
+    eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    [NSNumber numberWithBool:FALSE], kEAGLDrawablePropertyRetainedBacking, kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat, nil];
 		
 		renderer = [[ES2Renderer alloc] init];
 		
@@ -46,7 +46,7 @@
 				return nil;
 			}
 		}
-        
+    
 		animating = FALSE;
 		displayLinkSupported = FALSE;
 		animationFrameInterval = 1;
@@ -59,20 +59,20 @@
 		NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
 		if ([currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending)
 			displayLinkSupported = TRUE;
-    }
+  }
 	
-    return self;
+  return self;
 }
 
 - (void) drawView:(id)sender
 {
-    [renderer render];
+  [renderer render];
 }
 
 - (void) layoutSubviews
 {
 	[renderer resizeFromLayer:(CAEAGLLayer*)self.layer];
-    [self drawView:nil];
+  [self drawView:nil];
 }
 
 - (NSInteger) animationFrameInterval
@@ -109,7 +109,7 @@
 			// CADisplayLink is API new to iPhone SDK 3.1. Compiling against earlier versions will result in a warning, but can be dismissed
 			// if the system version runtime check for CADisplayLink exists in -initWithCoder:. The runtime check ensures this code will
 			// not be called in system versions earlier than 3.1.
-
+      
 			displayLink = [NSClassFromString(@"CADisplayLink") displayLinkWithTarget:self selector:@selector(drawView:)];
 			[displayLink setFrameInterval:animationFrameInterval];
 			[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -142,9 +142,9 @@
 
 - (void) dealloc
 {
-    [renderer release];
+  [renderer release];
 	
-    [super dealloc];
+  [super dealloc];
 }
 
 @end
