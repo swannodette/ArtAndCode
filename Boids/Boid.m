@@ -46,6 +46,22 @@
 {
   [[vel add:acc] limit:maxSpeed];
   [loc add:vel];
+  if(loc->x < 0)
+  {
+    loc->x += 320;
+  }
+  if(loc->x > 320)
+  {
+    loc->x -= 320;
+  }
+  if(loc->y < 0)
+  {
+    loc->y += 480;
+  }
+  if(loc->y > 480)
+  {
+    loc->y -= 480;
+  }
   [acc zero];
 }
 

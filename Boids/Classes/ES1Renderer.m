@@ -49,8 +49,8 @@ GLfloat triVertices[BOID_COUNT*6];
   for (Boid *b in boids) {
     Vector2D *loc = b->loc;
     Vector2D *vel = b->vel;
-    Vector2D *perp = [[[[vel copy] normalize] perp] mult:2.0f];
-    Vector2D *head = [[[vel copy] normalize] mult:6.0f];
+    Vector2D *perp = [[[[vel copy] normalize] perp] mult:3.0f];
+    Vector2D *head = [[[vel copy] normalize] mult:8.0f];
     triVertices[idx++] = loc->x + perp->x;
     triVertices[idx++] = loc->y + perp->y;
     triVertices[idx++] = loc->x - perp->x;  
@@ -80,7 +80,7 @@ GLfloat triVertices[BOID_COUNT*6];
   glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT);
   
-  glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+  glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
   
   glVertexPointer(2, GL_FLOAT, 0, triVertices);
   glEnableClientState(GL_VERTEX_ARRAY);
