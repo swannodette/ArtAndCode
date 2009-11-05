@@ -56,7 +56,7 @@
 
 - (void) drawView:(id)sender
 {
-  [renderer render];
+  [renderer render:flock];
 }
 
 - (void) layoutSubviews

@@ -7,6 +7,7 @@
 //
 
 #import "ES1Renderer.h"
+#import "Flock.h"
 
 @implementation ES1Renderer
 
@@ -34,7 +35,7 @@
 	return self;
 }
 
-- (void) render
+- (void) render:(Flock*)flock
 {
   // Replace the implementation of this method to do your own custom drawing
   // 160, 240

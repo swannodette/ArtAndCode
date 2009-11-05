@@ -10,10 +10,11 @@
 
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/EAGLDrawable.h>
+#import "Flock.h"
 
 @protocol ESRenderer <NSObject>
 
-- (void) render;
+- (void) render:(Flock*)flock;
 - (BOOL) resizeFromLayer:(CAEAGLLayer *)layer;
 
 @end

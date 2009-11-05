@@ -24,7 +24,7 @@
 	GLuint defaultFramebuffer, colorRenderbuffer;
 }
 
-- (void) render;
+- (void) render:(Flock*)flock;
 - (BOOL) resizeFromLayer:(CAEAGLLayer *)layer;
 
 @end
