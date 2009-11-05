@@ -41,8 +41,8 @@
   static const GLfloat squareVertices[] = {
     110.0f,  190.0f,
     210.0f,  190.0f,
-    210.0f,  290.0f,
     110.0f,  290.0f,
+    210.0f,  290.0f,
   };
 	
   static const GLubyte squareColors[] = {
