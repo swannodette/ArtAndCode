@@ -25,13 +25,13 @@
   {
     if(nil == loc)
     {
-      loc = [Vector2D randomInside:CGRectMake(0, 0, 320, 480)];
+      loc = [[Vector2D randomInside:CGRectMake(0, 0, 320, 480)] retain];
     }
     else 
     {
-      loc = aloc;
+      loc = [aloc retain];
     }
-    vel = [Vector2D randomInside:CGRectMake(-1, -1, 2, 2)];
+    vel = [[Vector2D randomInside:CGRectMake(-1, -1, 2, 2)] retain];
     acc = [Vector2D zero];
     maxSpeed = ms;
     maxForce = mf;
@@ -137,6 +137,11 @@
     return [result div:count];
   }
   return result;
+}
+
+- (NSString*) description
+{
+  return [NSString stringWithFormat:@"Boid %@", loc];
 }
 
 @end
