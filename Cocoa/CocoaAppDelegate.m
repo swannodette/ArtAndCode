@@ -17,4 +17,20 @@
 	// Insert code here to initialize your application 
 }
 
+- (IBAction) createLotsOfObjects:(id)sender
+{
+  for (int i = 0; i < 100000; i++) {
+    NSDictionary *d = [NSDictionary dictionaryWithObjectsAndKeys:@"bar", @"foo", nil];
+  }
+}
+
+- (IBAction) createLotsOfObjectsBetter:(id)sender
+{
+  for (int i = 0; i < 100000; i++) {
+    NSDictionary *d = [NSDictionary new];
+    [d setValue:@"bar" forKey:@"foo"];
+    [d release];
+  }
+}
+
 @end

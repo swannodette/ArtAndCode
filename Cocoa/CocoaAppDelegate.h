@@ -10,9 +10,14 @@
 
 @interface CocoaAppDelegate : NSObject <NSApplicationDelegate> 
 {
-	NSWindow *window;
+  NSWindow *window;
+  IBOutlet NSButton *createLotsButon;
+  IBOutlet NSButton *createLotsBetterButton;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+
+- (IBAction) createLotsOfObjects:(id)sender;
+- (IBAction) createLotsOfObjectsBetter:(id)sender;
 
 @end
