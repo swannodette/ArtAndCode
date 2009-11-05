@@ -37,12 +37,12 @@
 - (void) render
 {
   // Replace the implementation of this method to do your own custom drawing
-  
+  // 160, 240
   static const GLfloat squareVertices[] = {
-    -0.5f,  -0.33f,
-    0.5f,  -0.33f,
-    -0.5f,   0.33f,
-    0.5f,   0.33f,
+    110.0f,  190.0f,
+    210.0f,  190.0f,
+    210.0f,  290.0f,
+    110.0f,  290.0f,
   };
 	
   static const GLubyte squareColors[] = {
@@ -65,9 +65,10 @@
   
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
+  glOrthof(0, 320, 0, 480, -1, 1);
   glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-  glTranslatef(0.0f, (GLfloat)(sinf(transY)/2.0f), 0.0f);
+  glTranslatef(0.0f, (GLfloat)(sinf(transY)*50.0f), 0.0f);
 	transY += 0.075f;
 	
   glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
