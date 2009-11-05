@@ -11,6 +11,8 @@
 
 @implementation ES1Renderer
 
+GLfloat triVertices[BOID_COUNT*6];
+
 // Create an ES 1.1 context
 - (id) init
 {
@@ -38,20 +40,12 @@
 - (void) render:(Flock*)flock
 {
   // Replace the implementation of this method to do your own custom drawing
-  // 160, 240
-  static const GLfloat squareVertices[] = {
-    110.0f,  190.0f,
-    210.0f,  190.0f,
-    110.0f,  290.0f,
-    210.0f,  290.0f,
-  };
-	
-  static const GLubyte squareColors[] = {
-    255, 255,   0, 255,
-    0,   255, 255, 255,
-    0,     0,   0,   0,
-    255,   0, 255, 255,
-  };
+  triVertices[0] = 110.0f;
+  triVertices[1] = 190.0f;
+  triVertices[2] = 210.0f;  
+  triVertices[3] = 190.0f;
+  triVertices[4] = 110.0f;
+  triVertices[5] = 290.0f;
   
 	static float transY = 0.0f;
 	
@@ -75,12 +69,12 @@
   glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT);
   
-  glVertexPointer(2, GL_FLOAT, 0, squareVertices);
-  glEnableClientState(GL_VERTEX_ARRAY);
-  glColorPointer(4, GL_UNSIGNED_BYTE, 0, squareColors);
-  glEnableClientState(GL_COLOR_ARRAY);
+  glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
   
-  glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+  glVertexPointer(2, GL_FLOAT, 0, triVertices);
+  glEnableClientState(GL_VERTEX_ARRAY);
+  
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, 3);
   
 	// This application only creates a single color renderbuffer which is already bound at this point.
 	// This call is redundant, but needed if dealing with multiple renderbuffers.

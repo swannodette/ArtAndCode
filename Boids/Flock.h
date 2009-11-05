@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define BOID_COUNT 100
+#define BOID_COUNT 10
 
 @interface Flock : NSObject {
   int count;

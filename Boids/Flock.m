@@ -8,8 +8,14 @@
 
 #import "Flock.h"
 #import "Boid.h"
+#import "Vector2D.h"
 
 @implementation Flock
+
+- (Flock*) init
+{
+  return [self initWithCount:BOID_COUNT];
+}
 
 - (Flock*) initWithCount:(int)n
 {
