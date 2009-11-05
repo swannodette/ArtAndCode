@@ -33,7 +33,7 @@
     }
     // fix this
     vel = [[Vector2D randomInside:CGRectMake(-1, -1, 2, 2)] retain];
-    acc = [Vector2D zero];
+    acc = [[Vector2D zero] retain];
     maxSpeed = ms;
     maxForce = mf;
     size = BOID_SIZE;
@@ -145,5 +145,18 @@
 {
   return [NSString stringWithFormat:@"Boid loc:%@ vel:%@ acc:%@", loc, vel, acc];
 }
+
+
+- (void) dealloc
+{
+  [loc release];
+  loc = nil;
+  [vel release];
+  vel = nil;
+  [acc release];
+  acc = nil;
+  [super dealloc];
+}
+
 
 @end
