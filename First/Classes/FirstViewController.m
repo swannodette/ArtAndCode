@@ -17,7 +17,14 @@
 
 - (IBAction)sayHello:(id)sender
 {
-  label.text = @"Hello world!";
+  if(nil == name)
+  {
+    label.text = @"Hello world!";    
+  }
+  else 
+  {
+    label.text = [NSString stringWithFormat:@"Hello %@!", name];
+  }
 }
 
 - (void)didReceiveMemoryWarning 
@@ -29,10 +36,19 @@
 {
 }
 
+// let see what kind of messages we get!
+- (BOOL) respondsToSelector:(SEL)aSelector
+{
+  NSLog(@"FirstViewController respondsToSelector: %@", NSStringFromSelector(aSelector));
+  return [super respondsToSelector:aSelector];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)aInput 
 {
   if (aInput == input) 
   {
+    if(name) [name release];
+    name = [input.text copy];
     [input resignFirstResponder];
   }
   return YES;
@@ -40,6 +56,11 @@
 
 - (void)dealloc 
 {
+  if(name)
+  {
+    [name release];
+    name = nil;
+  }
   [super dealloc];
 }
 

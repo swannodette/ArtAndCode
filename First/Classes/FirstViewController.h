@@ -10,6 +10,7 @@
 
 @interface FirstViewController : UIViewController <UITextFieldDelegate>
 {
+  NSString *name;
   IBOutlet UIButton    *button;
   IBOutlet UILabel     *label;
   IBOutlet UITextField *input;
