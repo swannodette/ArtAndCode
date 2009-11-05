@@ -25,10 +25,12 @@
 
 - (Boid*) initWithLocation:(Vector2D*)aloc maxSpeed:(float)ms maxForce:(float)mf;
 
+- (void) update;
+
 - (Vector2D*) steer:(Vector2D*)target slowDown:(BOOL)slowDown;
 
-- (Vector2D*) cohesion:(Flock*)flock;
-- (Vector2D*) alignment:(Flock*)flock;
-- (Vector2D*) separation:(Flock*)flock;
+- (Vector2D*) cohesion:(NSArray*)flock;
+- (Vector2D*) alignment:(NSArray*)flock;
+- (Vector2D*) separation:(NSArray*)flock;
 
 @end

@@ -15,7 +15,7 @@
   NSMutableArray *boids;
 }
 
-- (void) initWithCount:(int)count;
+- (Flock*) initWithCount:(int)n;
 
 - (void) update;
 - (void) render;

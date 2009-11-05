@@ -17,6 +17,7 @@
   return [self initWithLocation:nil maxSpeed:2.0f maxForce:0.05f];
 }
 
+
 - (Boid*) initWithLocation:(Vector2D*)aloc maxSpeed:(float)ms maxForce:(float)mf
 {
   self = [super init];
@@ -40,6 +41,14 @@
 }
 
 
+- (void) update
+{
+  [[vel add:acc] limit:maxSpeed];
+  [loc add:vel];
+  [acc zero];
+}
+
+
 - (Vector2D*) steer:(Vector2D*)target slowDown:(BOOL)slowDown
 {
   Vector2D *desired = [Vector2D sub:target with:loc];
@@ -59,12 +68,12 @@
 }
 
 
-- (Vector2D*) cohesion:(Flock*)flock
+- (Vector2D*) cohesion:(NSArray*)boids
 {
   float nhood = 100.0f;
   int count = 0;
   Vector2D *result = [Vector2D zero];
-  for(Boid *b in [flock boids])
+  for(Boid *b in boids)
   {
     float d = [[Vector2D sub:loc with:b->loc] length];
     if(d > 0 && d < nhood)
@@ -81,12 +90,12 @@
 }
 
 
-- (Vector2D*) alignment:(Flock*)flock
+- (Vector2D*) alignment:(NSArray*)boids
 {
   float nhood = 50.0f;
   int count = 0;
   Vector2D *result = [Vector2D zero];
-  for(Boid *b in [flock boids])
+  for(Boid *b in boids)
   {
     if(b != self)
     {
@@ -106,12 +115,12 @@
 }
 
 
-- (Vector2D*) separation:(Flock*)flock
+- (Vector2D*) separation:(NSArray*)boids
 {
   float dsep = 25.0f;
   Vector2D *result = [Vector2D zero];
   int count = 0;
-  for(Boid *b in [flock boids])
+  for(Boid *b in boids)
   {
     if(b != self)
     {
