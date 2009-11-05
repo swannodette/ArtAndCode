@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define BOID_SIZE 2.0f
+
 @class Vector2D;
 @class Flock;
 

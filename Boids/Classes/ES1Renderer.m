@@ -8,6 +8,8 @@
 
 #import "ES1Renderer.h"
 #import "Flock.h"
+#import "Boid.h"
+#import "Vector2D.h"
 
 @implementation ES1Renderer
 
@@ -40,12 +42,22 @@ GLfloat triVertices[BOID_COUNT*6];
 - (void) render:(Flock*)flock
 {
   // Replace the implementation of this method to do your own custom drawing
-  triVertices[0] = 110.0f;
-  triVertices[1] = 190.0f;
-  triVertices[2] = 210.0f;  
-  triVertices[3] = 190.0f;
-  triVertices[4] = 110.0f;
-  triVertices[5] = 290.0f;
+  
+  // load the boid positions into the rendering array
+  NSArray *boids = [flock boids];
+  int idx = 0;
+  for (Boid *b in boids) {
+    Vector2D *loc = b->loc;
+    Vector2D *vel = b->vel;
+    Vector2D *perp = [[[[vel copy] normalize] perp] mult:2.0f];
+    Vector2D *head = [[[vel copy] normalize] mult:6.0f];
+    triVertices[idx++] = loc->x + perp->x;
+    triVertices[idx++] = loc->y + perp->y;
+    triVertices[idx++] = loc->x - perp->x;  
+    triVertices[idx++] = loc->y - perp->y;
+    triVertices[idx++] = loc->x + head->x;
+    triVertices[idx++] = loc->y + head->y;
+  }
   
 	static float transY = 0.0f;
 	
@@ -64,7 +76,6 @@ GLfloat triVertices[BOID_COUNT*6];
   glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
   glTranslatef(0.0f, (GLfloat)(sinf(transY)*50.0f), 0.0f);
-	transY += 0.075f;
 	
   glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT);
@@ -74,7 +85,7 @@ GLfloat triVertices[BOID_COUNT*6];
   glVertexPointer(2, GL_FLOAT, 0, triVertices);
   glEnableClientState(GL_VERTEX_ARRAY);
   
-  glDrawArrays(GL_TRIANGLE_STRIP, 0, 3);
+  glDrawArrays(GL_TRIANGLES, 0, 3*BOID_COUNT);
   
 	// This application only creates a single color renderbuffer which is already bound at this point.
 	// This call is redundant, but needed if dealing with multiple renderbuffers.

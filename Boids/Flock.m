@@ -46,12 +46,6 @@
 }
 
 
-- (void) render
-{
-  
-}
-
-
 - (NSArray*) boids
 {
   return boids;

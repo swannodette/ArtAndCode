@@ -42,6 +42,7 @@
 		animationTimer = nil;
     
     flock = [[Flock alloc] init];
+    //NSLog(@"%@", [flock boids]);
 		
 		// A system version of 3.1 or greater is required to use CADisplayLink. The NSTimer
 		// class is used as fallback when it isn't available.
@@ -56,6 +57,7 @@
 
 - (void) drawView:(id)sender
 {
+  [flock update];
   [renderer render:flock];
 }
 

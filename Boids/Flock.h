@@ -16,10 +16,7 @@
 }
 
 - (Flock*) initWithCount:(int)n;
-
 - (void) update;
-- (void) render;
-
 - (NSArray*) boids;
 
 @end

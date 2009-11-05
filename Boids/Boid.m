@@ -31,11 +31,12 @@
     {
       loc = [aloc retain];
     }
+    // fix this
     vel = [[Vector2D randomInside:CGRectMake(-1, -1, 2, 2)] retain];
     acc = [Vector2D zero];
     maxSpeed = ms;
     maxForce = mf;
-    size = 2.0f;
+    size = BOID_SIZE;
   }
   return self;
 }
@@ -139,9 +140,10 @@
   return result;
 }
 
+
 - (NSString*) description
 {
-  return [NSString stringWithFormat:@"Boid %@", loc];
+  return [NSString stringWithFormat:@"Boid loc:%@ vel:%@ acc:%@", loc, vel, acc];
 }
 
 @end
