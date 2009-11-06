@@ -14,10 +14,11 @@
   CGRect            originalFrame;
   BOOL              toggle;
   UIImageView       *imageView;
-  AVAudioPlayer     player
+  AVAudioPlayer     *player;
 }
 
 - (IBAction)animate:(id)sender;
+- (IBAction)playAudio:(id)sender;
 
 @end
 
