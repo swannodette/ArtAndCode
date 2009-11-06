@@ -11,7 +11,7 @@
 @implementation ResourceFunViewController
 
 
-- (void)viewDidLoad 
+- (void)viewDidLoad
 {
   toggle = NO;
   [super viewDidLoad];

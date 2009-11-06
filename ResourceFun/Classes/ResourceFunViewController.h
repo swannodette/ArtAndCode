@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ResourceFunViewController : UIViewController 
 {
-  CGRect      originalFrame;
-  BOOL        toggle;
-  UIImageView *imageView;
+  CGRect            originalFrame;
+  BOOL              toggle;
+  UIImageView       *imageView;
+  AVAudioPlayer     player
 }
 
 - (IBAction)animate:(id)sender;
