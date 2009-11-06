@@ -9,7 +9,7 @@ typedef struct Vector
   float y;
 } Vector;
 
-// this only hold here becaues C is pass by value
+// this only holds here becaues C is pass by value
 void change(Vector a)
 {
   a.x = a.x + 3.3f;
