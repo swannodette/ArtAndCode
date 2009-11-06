@@ -22,7 +22,7 @@
 
 - (void) setFoo:(Foo*)aFoo
 {
-	[foo release];
+	if (foo != nil) [foo release];
 	foo = [aFoo retain];
 }
 
@@ -33,7 +33,7 @@
 
 - (void) dealloc
 {
-	[foo dealloc];
+	if(foo != nil) [foo dealloc];
 	foo = nil;
 	NSLog(@"dealloc GoodClass");
 	[super dealloc];

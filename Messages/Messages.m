@@ -18,7 +18,7 @@ int main (int argc, const char * argv[]) {
 	NSLog(@"aInstance1 responds to sayHello, %d", [aInstance1 respondsToSelector:@selector(sayHello)]);
 
 	// can call a method like so
-	[aInstance1 performSelector:@selector(sayHello)];
+	[aInstance1 performSelector:@selector(sayHello)]; // [aInstance1 sayHello];
 	
 	// even if all you have is a string, easy to do dynamic dispatch
 	[aInstance1 performSelector:NSSelectorFromString(@"sayHello")];

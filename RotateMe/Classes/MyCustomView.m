@@ -29,6 +29,7 @@
   squareSize = 100.0f;
   twoFingers = NO;
   rotation = 0.5f;
+  
   // You have to explicity turn on multitouch for the view
   self.multipleTouchEnabled = YES;
   
@@ -56,6 +57,7 @@
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
   UIAccelerationValue x, y, z;
+  
   x = acceleration.x;
   y = acceleration.y;
   z = acceleration.z;

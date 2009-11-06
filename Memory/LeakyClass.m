@@ -22,7 +22,7 @@
 
 - (void) setFoo:(Foo*)aFoo
 {
-	// Oops forgot to release foo!ß∫
+	// Oops forgot to release foo!
 	foo = [aFoo retain];
 }
 

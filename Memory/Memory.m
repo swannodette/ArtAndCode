@@ -16,7 +16,7 @@ int main (int argc, const char * argv[]) {
 	[objectB release];
 	
 	GoodClass *objectC = [[[GoodClass alloc] init] autorelease];
-	NSLog(@"objectC retain count: %d", [objectB retainCount]);
+	NSLog(@"objectC retain count: %d", [objectC retainCount]);
 	
 	// alloc, new, retain, copy - usually means you need to do a manual release
 	// many objects in Objective-C are autoreleased, if you need them beyond
