@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0703035810A36632003CA656 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0703035710A36632003CA656 /* image.jpg */; };
 		070303BA10A39C75003CA656 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070303B910A39C75003CA656 /* AVFoundation.framework */; };
-		0703040210A3A270003CA656 /* sosumi.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0703040110A3A270003CA656 /* sosumi.wav */; };
+		0703043110A3A3E8003CA656 /* sosumi.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0703043010A3A3E8003CA656 /* sosumi.wav */; };
 		1D3623260D0F684500981E51 /* ResourceFunAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ResourceFunAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		0703035710A36632003CA656 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		070303B910A39C75003CA656 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0703040110A3A270003CA656 /* sosumi.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sosumi.wav; path = ../../../Desktop/sosumi.wav; sourceTree = SOURCE_ROOT; };
+		0703043010A3A3E8003CA656 /* sosumi.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sosumi.wav; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* ResourceFunAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceFunAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* ResourceFunAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceFunAppDelegate.m; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0703040110A3A270003CA656 /* sosumi.wav */,
+				0703043010A3A3E8003CA656 /* sosumi.wav */,
 				0703035710A36632003CA656 /* image.jpg */,
 				2899E5210DE3E06400AC0155 /* ResourceFunViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -162,7 +162,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* ResourceFunViewController.xib in Resources */,
 				0703035810A36632003CA656 /* image.jpg in Resources */,
-				0703040210A3A270003CA656 /* sosumi.wav in Resources */,
+				0703043110A3A3E8003CA656 /* sosumi.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
